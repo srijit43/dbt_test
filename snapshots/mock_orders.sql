@@ -8,8 +8,7 @@
         target_schema=new_schema,  
         unique_key='order_id',
         strategy='timestamp',
-        updated_at='updated_at',
-        invalidate_hard_deletes=False
+        updated_at='updated_at'
     )
 }}
 
