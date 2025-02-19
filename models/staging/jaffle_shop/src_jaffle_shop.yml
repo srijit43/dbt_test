@@ -15,3 +15,15 @@ sources:
           error_after:
             count: 24
             period: hour
+
+models:
+  - name: stg_customers
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+          
+          
+          
+          

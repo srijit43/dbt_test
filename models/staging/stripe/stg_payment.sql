@@ -7,7 +7,7 @@ with payments as (
         amount,
         created
 
-    from raw.stripe.payments
+    from {{source('stripe','payment')}}
 )
 
 Select * from payments
