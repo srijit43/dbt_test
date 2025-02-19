@@ -1,0 +1,20 @@
+with orders as (
+    Select * from {{ref('stg_orders')}}
+),
+
+payments as (
+    Select * from {{ref("stg_payment")}}
+),
+
+fct_orders as (
+    Select order_id,
+    payment_id,
+    amount
+    from orders o 
+    left join
+    payments p 
+    on 
+    o.order_id = p.orderid
+)
+
+Select * from fct_orders
