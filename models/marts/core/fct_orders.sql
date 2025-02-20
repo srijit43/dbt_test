@@ -15,7 +15,9 @@ payments as (
 
 fct_orders as (
     Select order_id,
+    customer_id,
     payment_id,
+    paymentmethod,
     amount
     from orders o 
     left join
